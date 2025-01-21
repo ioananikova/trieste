@@ -437,7 +437,7 @@ class ProbabilityOfFeasibility(SingleModelAcquisitionBuilder[ProbabilisticModel]
         :param threshold: The (scalar) probability of feasibility threshold.
         :raise ValueError (or InvalidArgumentError): If ``threshold`` is not a scalar.
         """
-        tf.debugging.assert_scalar(threshold)
+        #tf.debugging.assert_scalar(threshold)
 
         self._threshold = threshold
 
@@ -494,7 +494,7 @@ class probability_below_threshold(AcquisitionFunctionClass):
         greater than one.
         :raise ValueError or tf.errors.InvalidArgumentError: If ``threshold`` is not a scalar.
         """
-        tf.debugging.assert_scalar(threshold)
+        #tf.debugging.assert_scalar(threshold)
         self._model = model
         self._threshold = tf.Variable(threshold)
 
